@@ -1,0 +1,94 @@
+<mvc:View controllerName="OrderSystem.ordersystem.controller.Header"
+ xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
+    <l:Splitter id="_IDGenHorizontalLayout1" >
+        <VBox id="_IDGenVBox1" width="95%">
+            <items>
+                <FlexBox id="MainFlexBox" justifyContent="SpaceBetween">
+                    <FlexBox id="OrderFlexBox2"  class="sapUiTinyMargin" direction="Column" width="33.33%">
+                        <items>
+                            <Label id="LableOrderType" text="Order Type"></Label>
+                            <ComboBox id="selectSheet" width="100%" items="{oOrderData>/OrderType}">
+                                <items >
+                                    <core:Item id="Ordertypeitems" key="{oOrderData>id}" text="{oOrderData>type}" />
+                                </items>
+                            </ComboBox>
+                        </items>
+                    </FlexBox>
+                    <FlexBox id="_IDGenVBox3" class="sapUiTinyMargin" direction="Column" width="33.33%">
+                        <items>
+                            <Label id="CustomerCodeLable" text="Customer(Customer code)"></Label>
+                            <ComboBox id="selectSheet5" width="100%" items="{oOrderData>/customerCode}">
+                                <items>
+                                     <core:Item id="ItemsCustomerCode" key="{oOrderData>id}" text="{oOrderData>code}" />
+                                </items>
+                            </ComboBox>
+                        </items>
+                    </FlexBox>
+                    <FlexBox id="DatePickerBox" class="sapUiTinyMargin" direction="Column" width="33.33%">
+                        <items>
+                            <Label id="_IDGenLabel3" text="Req Delivery Date"></Label>
+                            <DatePicker id="ReqDeliveryDate" width="100%"></DatePicker>
+                        </items>
+                    </FlexBox>
+                </FlexBox>
+                <FlexBox id="VKORGFlexBox" justifyContent="SpaceBetween">
+                    <FlexBox id="_IDGenVBox5" class="sapUiTinyMargin" direction="Column" width="33.33%">
+                        <items>
+                            <Label id="LableVKORG" text="VKORG"></Label>
+                            <ComboBox id="ComboBoxVKORG" enabled="false" width="100%">
+                                <items>
+                                    
+                                </items>
+                            </ComboBox>
+                        </items>
+                    </FlexBox>
+                    <FlexBox id="_IDGenVBox6"  class="sapUiTinyMargin" direction="Column" width="33.33%">
+                        <items>
+                            <Label id="_IDGenLabel5" text="VTWEG"></Label>
+                            <ComboBox id="selectSheet4" enabled="false" width="100%">
+                                <items>
+                                    
+                                </items>
+                            </ComboBox>
+                        </items>
+                    </FlexBox>
+                    <FlexBox id="_IDGenVBox7"  class="sapUiTinyMargin" direction="Column" width="33.33%">
+                        <items>
+                            <Label id="_IDGenLabel6" text="SPART"></Label>
+                            <ComboBox id="selectSheet6" enabled="false" width="100%">
+                                <items>
+                                   
+                                </items>
+                            </ComboBox>
+                        </items>
+                    </FlexBox>
+                </FlexBox>
+                <FlexBox id="_IDGenFlexBox1f" justifyContent="SpaceBetween">
+                    <FlexBox id="_IDGenVBox8"  class="sapUiTinyMargin" direction="Column" width="72%">
+                        <items>
+                            <Label id="_IDGenLabel7" text="Punch ord n."></Label>
+                            <Input id="_IDGenInput1"></Input>
+                        </items>
+                    </FlexBox>
+                    <FlexBox id="_IDGenVBox9"  class="sapUiTinyMargin" direction="Column" width="35%">
+                        <items>
+                            <Label id="_IDGenLabel8" text="PYMNT Conditions"></Label>
+                            <ComboBox id="selectSheet7" enabled="true" width="100%" items="{oOrderData>/PymntConditions}">
+                                <items>
+                                     <core:Item id="PYMNTConditionItems" key="{oOrderData>id}" text="{oOrderData>type}" />
+                                </items>
+                            </ComboBox>
+                        </items>
+                    </FlexBox>
+                </FlexBox>
+            </items>
+            <layoutData>
+                <l:SplitterLayoutData id="_IDGenSplitterLayoutData1"  resizable="false" />
+            </layoutData>
+        </VBox>
+    
+         <VBox id="_IDGenVBox2s" width="95%">
+		  </VBox>
+    </l:Splitter>
+
+</mvc:View>

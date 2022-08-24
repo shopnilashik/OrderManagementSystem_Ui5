@@ -1,0 +1,39 @@
+<mvc:View controllerName="OrderSystem.ordersystem.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.uxap"  xmlns:layout="sap.ui.layout" 
+	xmlns:m="sap.m">
+    <ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="true" upperCaseAnchorBar="false">
+    <headerTitle>
+			<ObjectPageDynamicHeaderTitle id="_IDGenObjectPageDynamicHeaderTitle1">
+				<heading>
+					<m:Title id="_IDGenTitle1" text="Order Managment System"/>
+				</heading>
+
+         
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+   
+        <sections>
+			<ObjectPageSection id="_IDGenObjectPageSection1" titleUppercase="false" title="Header">
+				<subSections>
+					<ObjectPageSubSection id="_IDGenObjectPageSubSection1" titleUppercase="false">
+						<blocks>
+								<mvc:XMLView id="_IDGenXMLView1" viewName="OrderSystem.ordersystem.view.Header"></mvc:XMLView>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+            	<ObjectPageSection id="_IDGenObjectPageSection12" titleUppercase="false" title="Items">
+				<subSections>
+					<ObjectPageSubSection id="_IDGenObjectPageSubSection12" titleUppercase="false">
+						<blocks>
+								
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+            
+		</sections>
+    </ObjectPageLayout>
+</mvc:View>
