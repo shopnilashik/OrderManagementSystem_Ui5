@@ -42,7 +42,7 @@
                             </ComboBox>
                         </items>
                     </FlexBox>
-                    <FlexBox id="_IDGenVBox6"  class="sapUiTinyMargin" direction="Column" width="33.33%">
+                    <FlexBox id="FlexVTWEGBox"  class="sapUiTinyMargin" direction="Column" width="33.33%">
                         <items>
                             <Label id="_IDGenLabel5" text="VTWEG"></Label>
                             <ComboBox id="selectSheet4" enabled="false" width="100%">
@@ -52,10 +52,10 @@
                             </ComboBox>
                         </items>
                     </FlexBox>
-                    <FlexBox id="_IDGenVBox7"  class="sapUiTinyMargin" direction="Column" width="33.33%">
+                    <FlexBox id="FlexBoxSPART"  class="sapUiTinyMargin" direction="Column" width="33.33%">
                         <items>
                             <Label id="_IDGenLabel6" text="SPART"></Label>
-                            <ComboBox id="selectSheet6" enabled="false" width="100%">
+                            <ComboBox id="ComboBoxSPART" enabled="false" width="100%">
                                 <items>
                                    
                                 </items>
@@ -63,11 +63,11 @@
                         </items>
                     </FlexBox>
                 </FlexBox>
-                <FlexBox id="_IDGenFlexBox1f" justifyContent="SpaceBetween">
-                    <FlexBox id="_IDGenVBox8"  class="sapUiTinyMargin" direction="Column" width="72%">
+                <FlexBox id="FlexBoxPunchMain" justifyContent="SpaceBetween">
+                    <FlexBox id="FlexBoxPunch"  class="sapUiTinyMarginTop sapUiTinyMarginBegin sapUiTinyMarginBottom" direction="Column" alignContent="Stretch" alignItems="Stretch" width="72%">
                         <items>
-                            <Label id="_IDGenLabel7" text="Punch ord n."></Label>
-                            <Input id="_IDGenInput1"></Input>
+                            <Label id="LebelPunch" text="Punch ord n."></Label>
+                            <Input id="InputPunch"></Input>
                         </items>
                     </FlexBox>
                     <FlexBox id="_IDGenVBox9"  class="sapUiTinyMargin" direction="Column" width="35%">
@@ -83,12 +83,60 @@
                 </FlexBox>
             </items>
             <layoutData>
-                <l:SplitterLayoutData id="_IDGenSplitterLayoutData1"  resizable="false" />
+                <l:SplitterLayoutData id="_IDGenSplitterLayoutData1"  resizable="true" />
             </layoutData>
         </VBox>
     
-         <VBox id="_IDGenVBox2s" width="95%">
-		  </VBox>
+        <VBox id="_IDGenVBox2s" width="90%">
+		 <items>
+		   <FlexBox id="ShiptoFlexBox"  class="sapUiTinyMargin" direction="Column" width="100%">
+				<FlexBox id="ShiptoFlexBox1"  class="sapUiTinyMargin" justifyContent="SpaceBetween" width="100%">
+					<FlexBox id="_IDGenVBox"  class="sapUiTinyMargin" direction="Column" width="50%">
+						<items>
+							<Label id="_IDGenLabel" text="Ship-to (ship-to-code)"></Label>
+							<ComboBox id="selectShee7" enabled="true" width="100%" items="{oOrderData>/ShipTo}">
+								<items>
+									<core:Item id="PYMNTConditionItem"  text="{oOrderData>name}" />
+								</items>
+							</ComboBox>
+						</items>
+					</FlexBox>
+
+					<FlexBox id="FlexBoxName1"  class="sapUiTinyMargin" direction="Column" width="50%">
+						<items>
+							<Label id="LebelName1" text="NAME1_WE+NAME2_WE"></Label>
+							<Input id="InputName"></Input>
+						</items>
+					</FlexBox>
+							
+					</FlexBox>
+						<FlexBox id="FlexBoxStars" class="sapUiTinyMarginBegin sapUiMediumMarginEnd"  direction="Column"  width="98.6%">
+							<FlexBox id="FlexBoxStars1" class="sapUiTinyMargin" direction="Column"  width="98.6%">
+								<items>
+									<Label id="LebelStars" text="STRAS_WE"></Label>
+									<Input id="InputStars"></Input>
+								</items>
+							</FlexBox>
+						</FlexBox>
+
+					<FlexBox id="FlexBoxS" alignContent="Stretch" alignItems="Stretch" justifyContent="SpaceBetween" direction="Row" width="98.6%">	
+                             <FlexBox id="FlexBoxS1" class="sapUiTinyMargin" direction="Column"  width="98.6%">
+								<items>
+									<Label id="LebelPSTLZ" text="PSTLZ_WE"></Label>
+									<Input id="InputPSTLZ"></Input>
+								</items>
+							</FlexBox>
+							<FlexBox id="FlexBoxS2" class="sapUiTinyMargin" direction="Column"  width="98.6%">
+								<items>
+									<Label id="LebelORT01" text="ORT01_WE"></Label>
+									<Input id="InputORT01"></Input>
+								</items>
+							</FlexBox>
+		            </FlexBox>
+		   </FlexBox>
+	
+	     </items>
+		</VBox>
     </l:Splitter>
 
 </mvc:View>

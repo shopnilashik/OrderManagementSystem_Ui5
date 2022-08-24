@@ -71,14 +71,22 @@ sap.ui.define(
               id: 5,
               code: "XJHU65S",
             },
-
+          ],
+          ShipTo: [
             {
-              id: 6,
-              code: "EJSD6S6",
+              name: "AL",
             },
             {
-              id: 7,
-              code: "WSJ5545S",
+              name: "AK",
+            },
+            {
+              name: "LA",
+            },
+            {
+              name: "KY",
+            },
+            {
+              name: "OH",
             },
           ],
         });
