@@ -89,6 +89,18 @@ sap.ui.define(
               name: "OH",
             },
           ],
+          Carrir: [
+            {
+              name: "Carrir 1",
+            },
+            {
+              name: "Carrir 1",
+            },
+            {
+              name: "Carrir 1",
+            },
+            
+          ],
         });
         this.getView().setModel(oJsonModel, "oOrderData");
 

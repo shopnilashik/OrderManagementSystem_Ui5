@@ -1,0 +1,54 @@
+<mvc:View controllerName="OrderSystem.ordersystem.controller.Notes"
+ xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
+    <l:Splitter id="_IDGenHorizontalLayout1" >
+
+
+		<FlexBox id="MainFlexBox" direction="Row" width="100%">
+				<FlexBox id="1" direction="Row"  width="30%">
+				    <FlexBox id="Left1" direction="Column" >
+						<Label id="_IDGenLabel1" text="Note Type"></Label>
+						<ComboBox id="selectSheet" >
+							<items>
+								
+							</items>
+						</ComboBox>
+				    </FlexBox>
+				</FlexBox>
+
+
+                <FlexBox id="RightTable" direction="Row"  width="80%">
+					<FlexBox id="Left12" direction="Column" >
+						<Label id="_IDGenLabel12" text="Note Text"></Label>
+						<TextArea id="_IDGenTextArea1"  rows="5" width="100%" />
+					</FlexBox>
+					 <Table id="_IDGenTable1" class="sapUiTinyMargin" items="{oOrderData>/Note}" width="90%" >
+                            <columns>
+                                <Column id="_IDGenColumn1" >
+                                    <Text id="_IDGenText1" text="Note Type"></Text>
+                                </Column>
+                                <Column id="_IDGenColumn2" >
+                                    <Text id="_IDGenText2" text="Text"></Text>
+                                </Column>
+                                <Column id="_IDGenColumn3" >
+                                    <Text id="_IDGenText3" text="Delete"></Text>
+                                </Column>
+                               
+                            </columns>
+                            <items>
+                                <ColumnListItem id="_IDGenColumnListItem2" >
+                                    <cells>
+                                            <Text id="_IDGenTdeext5" text="{oOrderData>type}"/>
+                                            
+                                            <Text id="_IDGenTefdext7" text="{oOrderData>text}"/>
+                                            <core:Icon id="_IDGenIcon1" src="sap-icon://decline"></core:Icon>
+                                    </cells>
+                                </ColumnListItem>
+                        
+                            </items>
+                        </Table>
+				</FlexBox>
+
+		  </FlexBox>
+    </l:Splitter>
+
+</mvc:View>

@@ -1,0 +1,68 @@
+<mvc:View controllerName="OrderSystem.ordersystem.controller.HeaderPricing"
+ xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
+    <l:Splitter id="_IDGenHorizontalLayout1" >
+
+
+		<FlexBox id="MainFlexBox" direction="Row" width="100%">
+				<FlexBox id="LeftTable" direction="Row"  width="60%">
+				<Table id="_IDGenTable1" class="sapUiTinyMarginEnd" items="{oOrderData>/Discount}">
+						<headerToolbar>
+							<OverflowToolbar id="_IDGenOverflowToolbar1">
+								<content>
+									<Title id="_IDGenTitle1" text="Header Pricing"></Title>
+								</content>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column id="_IDGenColumn1" >
+								<Text id="_IDGenText1" text="Condition" ></Text>
+							</Column>
+							<Column id="_IDGenColumn2" >
+								<Text id="_IDGenText2" text="Cond. Description"></Text>
+							</Column>
+							<Column id="_IDGenColumn3" >
+								<Text id="_IDGenText3" text="Value"></Text>
+							</Column>
+							<Column id="_IDGenColumn4" >
+								<Text id="_IDGenText4" text="Curr"></Text>
+							</Column>
+							<Column id="_IDGenColumn5" >
+								<Text id="_IDGenText5" text="Price Unit"></Text>
+							</Column>
+							<Column id="_IDGenColumn6" >
+								<Text id="_IDGenText6" text="UoM"></Text>
+							</Column>
+							<Column id="_IDGenColumn7" >
+								<Text id="_IDGenText7" text="COndition Value"></Text>
+							</Column>
+							<Column id="_IDGenColumn8" >
+								<Text id="_IDGenText8" text="Curr"></Text>
+							</Column>
+
+						</columns>
+						<items>
+							<ColumnListItem id="_IDGenColumnListItem1" >
+								<cells>
+									<ObjectNumber id="_IDGenObjectNumber1" number="{oOrderData>condition}" emphasized="false"/>
+										<Text id="_IDGenText51" text="{oOrderData>contDes}"/>
+										<Text id="_IDGenText61" text="{oOrderData>value}"/>
+										<Text id="_IDGenText72" text="{oOrderData>curr}"/>
+										<Text id="_IDGenText73" text="{oOrderData>priceUnits}"/>
+										<Text id="_IDGenText74" text="{oOrderData>uom}"/>
+										<Text id="_IDGenText75" text="{oOrderData>conditionValue}"/>
+										<Text id="_IDGenText77" text="{oOrderData>curr1}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<layoutData>
+							<l:SplitterLayoutData id="_IDGenSplitterLayoutData1"  resizable="false" />
+						</layoutData>
+					</Table>
+				</FlexBox>
+
+
+
+		  </FlexBox>
+    </l:Splitter>
+
+</mvc:View>

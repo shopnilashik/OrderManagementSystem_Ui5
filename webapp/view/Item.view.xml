@@ -1,0 +1,116 @@
+<mvc:View controllerName="OrderSystem.ordersystem.controller.Item"
+ xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
+    <l:Splitter id="_IDGenHorizontalLayout1" >
+      <HBox id="_IDGenVBox1" width="95%">
+	     <items>
+		    <FlexBox id="MainFlexBox" direction="Row"  width="100%">
+				<FlexBox id="LineItemFlexBox2" alignContent="Start" alignItems="Start" class="sapUiTinyMarginEnd" direction="Column" >
+				     <Label id="_IDGenLa" text=""></Label>
+					<CheckBox id="_IDGenCheckBox1" text="Line Item" ></CheckBox>
+				</FlexBox>
+
+				<FlexBox id="ProductFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="_IDGenLabel1" text="Product"></Label>
+					 <ComboBox id="selectSheet" width="100%" items="{oOrderData>/Product}">
+						<items >
+							<core:Item id="Productitems"  text="{oOrderData>name}" />
+						</items>
+                    </ComboBox>
+				</FlexBox>
+
+				<FlexBox id="QtyFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="_IDGenLabelQty" text="QTY"></Label>
+					<Input id="InputQty"></Input>
+				</FlexBox>
+
+                <FlexBox id="UoMFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="LabelUoM" text="UoM"></Label>
+					<Input id="InputUom"></Input>
+				</FlexBox>
+
+				<FlexBox id="PriceListFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="LabelPriceList" text="UoM"></Label>
+					<Input id="InputPriceList" enabled="false"></Input>
+				</FlexBox>
+
+				<FlexBox id="CURRFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="LabelCURR" text="CURR"></Label>
+					<Input id="InputCURR" enabled="false" ></Input>
+				</FlexBox>
+
+
+				<FlexBox id="CategoryFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="LabelCategory" text="Product"></Label>
+					 <ComboBox id="selectCategory" width="100%" items="{oOrderData>/Category}">
+						<items >
+							<core:Item id="Categoryitems"  text="{oOrderData>item}" />
+						</items>
+                    </ComboBox>
+				</FlexBox>
+
+
+				<FlexBox id="BatchFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="LabelBatch" text="Batch"></Label>
+					 <ComboBox id="selectBatch" width="100%" items="{oOrderData>/Batch}">
+						<items >
+							<core:Item id="Batchitems"  text="{oOrderData>code}" />
+						</items>
+                    </ComboBox>
+				</FlexBox>
+
+
+				 <FlexBox id="DatePickerBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column">
+                        <items>
+                            <Label id="_IDGenLabel3" text="Req Delivery Date"></Label>
+                            <DatePicker id="ReqDeliveryDate" ></DatePicker>
+                        </items>
+                </FlexBox>
+
+
+				 <FlexBox id="DatePickerBoxATP" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column">
+                        <items>
+                            <Label id="LabelATP" text="Delivery Date ATP"></Label>
+                            <DatePicker id="DeliveryDateATP" ></DatePicker>
+                        </items>
+                </FlexBox>
+
+
+				<FlexBox id="ManualPriceFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="LabelManualPrice" text="Manual Price"></Label>
+					<Input id="InputManualPrice" ></Input>
+				</FlexBox>
+
+
+				<FlexBox id="CURRFlexBox2" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="LabelCURR2" text="CURR"></Label>
+					<Input id="InputCURR2"  ></Input>
+				</FlexBox>
+
+
+				<FlexBox id="DiscFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="LabelDisc" text="Disc %"></Label>
+					<Input id="InputDic" ></Input>
+				</FlexBox>
+
+
+				<FlexBox id="NavFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+					<Label id="_IDGenLabel9df" text=""></Label>
+                    <Button id="_IDGenButton1" icon="sap-icon://initiative" type="Transparent"  ></Button>
+				</FlexBox>
+            </FlexBox>
+			<HBox id="_IDGenVBox2" justifyContent="End">
+               <items>
+                <Button id="_IDGenButton2" text="Simulate" class=" simulateMargin"></Button>
+            </items>
+		  </HBox>
+		 </items>
+		     <layoutData>
+                <l:SplitterLayoutData id="_IDGenSplitterLayoutData1"  resizable="false" />
+            </layoutData>
+		 </HBox>
+
+
+		  
+    </l:Splitter>
+
+</mvc:View>

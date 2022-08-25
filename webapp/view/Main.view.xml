@@ -14,26 +14,72 @@
 		</headerTitle>
    
         <sections>
-			<ObjectPageSection id="_IDGenObjectPageSection1" titleUppercase="false" title="Header">
+			<ObjectPageSection id="ObjectPageSectionHeader" titleUppercase="false" title="Header">
 				<subSections>
-					<ObjectPageSubSection id="_IDGenObjectPageSubSection1" titleUppercase="false">
+					<ObjectPageSubSection id="ObjectPageSubSectionHeader" titleUppercase="false">
 						<blocks>
-								<mvc:XMLView id="_IDGenXMLView1" viewName="OrderSystem.ordersystem.view.Header"></mvc:XMLView>
+								<mvc:XMLView id="XMLView1Header" viewName="OrderSystem.ordersystem.view.Header"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
 			</ObjectPageSection>
 
-            	<ObjectPageSection id="_IDGenObjectPageSection12" titleUppercase="false" title="Items">
+
+            	<ObjectPageSection id="ObjectPageSectionItem" titleUppercase="false" title="Items">
 				<subSections>
-					<ObjectPageSubSection id="_IDGenObjectPageSubSection12" titleUppercase="false">
+					<ObjectPageSubSection id="ObjectPageSubSectionItem" titleUppercase="false">
 						<blocks>
-								
+								<mvc:XMLView id="XMLViewItem" viewName="OrderSystem.ordersystem.view.Item"></mvc:XMLView>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+
+				<ObjectPageSection id="ObjectPageSectionPromoVistex" titleUppercase="false" title="Promo Vistex">
+				<subSections>
+					<ObjectPageSubSection id="ObjectPageSubSectionPromoVistex" titleUppercase="false">
+						<blocks>
+								<mvc:XMLView id="XMLViewPromoVistex" viewName="OrderSystem.ordersystem.view.PromoVistex"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
 				</subSections>
 			</ObjectPageSection>
             
+
+			<ObjectPageSection id="ObjectPageSectionHeaderPricing" titleUppercase="false" title="Header Pricing">
+				<subSections>
+					<ObjectPageSubSection id="ObjectPageSubSectionHeaderPricing" titleUppercase="false">
+						<blocks>
+								<mvc:XMLView id="XMLViewHeaderPricing" viewName="OrderSystem.ordersystem.view.HeaderPricing"></mvc:XMLView>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+
+			<ObjectPageSection id="ObjectPageSectionPartners" titleUppercase="false" title="Partners">
+				<subSections>
+					<ObjectPageSubSection id="ObjectPageSubSectionPartners" titleUppercase="false">
+						<blocks>
+								<mvc:XMLView id="XMLViewPartners" viewName="OrderSystem.ordersystem.view.Partners"></mvc:XMLView>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+
+				<ObjectPageSection id="ObjectPageSectionNotes" titleUppercase="false" title="Notes">
+				<subSections>
+					<ObjectPageSubSection id="ObjectPageSubSectionNotes" titleUppercase="false">
+						<blocks>
+								<mvc:XMLView id="XMLViewNotes" viewName="OrderSystem.ordersystem.view.Notes"></mvc:XMLView>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+
+
 		</sections>
     </ObjectPageLayout>
 </mvc:View>

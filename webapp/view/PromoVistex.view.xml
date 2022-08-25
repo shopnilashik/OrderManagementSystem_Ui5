@@ -1,0 +1,89 @@
+<mvc:View controllerName="OrderSystem.ordersystem.controller.PromoVistex"
+ xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
+    <l:Splitter id="_IDGenHorizontalLayout1" >
+
+
+		<FlexBox id="MainFlexBox" direction="Row" width="100%">
+				<FlexBox id="LeftTable" direction="Row"  width="40%">
+				<Table id="_IDGenTable1" class="sapUiTinyMarginEnd" items="{oOrderData>/Discount}">
+						<headerToolbar>
+							<OverflowToolbar id="_IDGenOverflowToolbar1">
+								<content>
+									<Title id="_IDGenTitle1" text="Discount"></Title>
+								</content>
+							</OverflowToolbar>
+						</headerToolbar>
+						<columns>
+							<Column id="_IDGenColumn1" >
+								<Text id="_IDGenText1" text="Condition" ></Text>
+							</Column>
+							<Column id="_IDGenColumn2" >
+								<Text id="_IDGenText2" text="Cond. Description"></Text>
+							</Column>
+							<Column id="_IDGenColumn3" >
+								<Text id="_IDGenText3" text="Value"></Text>
+							</Column>
+							<Column id="_IDGenColumn4" >
+								<Text id="_IDGenText4" text="Curr"></Text>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem id="_IDGenColumnListItem1" >
+								<cells>
+									<ObjectNumber id="_IDGenObjectNumber1" number="{oOrderData>condition}" emphasized="false"/>
+										<Text id="_IDGenText5" text="{oOrderData>contDes}"/>
+										<Text id="_IDGenText6" text="{oOrderData>value}"/>
+										<Text id="_IDGenText7" text="{oOrderData>curr}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<layoutData>
+							<l:SplitterLayoutData id="_IDGenSplitterLayoutData1"  resizable="false" />
+						</layoutData>
+					</Table>
+				</FlexBox>
+
+
+                <FlexBox id="RightTable" direction="Row"  width="40%">
+					<Table id="Righttable" class="sapUiMediumMarginBegin" items="{oOrderData>/Discount}">
+							<headerToolbar>
+								<OverflowToolbar id="_IDGenOverflowToolbar12">
+									<content>
+										<Title id="_IDGenTitle12" text="ADD-ON"></Title>
+									</content>
+								</OverflowToolbar>
+							</headerToolbar>
+							<columns>
+								<Column id="_IDGenColumn12" >
+									<Text id="_IDGenText12" text="Condition" ></Text>
+								</Column>
+								<Column id="_IDGenColumn22" >
+									<Text id="_IDGenText22" text="Cond. Description"></Text>
+								</Column>
+								<Column id="_IDGenColumn32" >
+									<Text id="_IDGenText32" text="Value"></Text>
+								</Column>
+								<Column id="_IDGenColumn42" >
+									<Text id="_IDGenText42" text="Curr"></Text>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem id="_IDGenColumnListItem12" >
+									<cells>
+										<ObjectNumber id="_IDGenObjectNumber12" number="{oOrderData>condition}" emphasized="false"/>
+											<Text id="_IDGenText52" text="{oOrderData>contDes}"/>
+											<Text id="_IDGenText62" text="{oOrderData>value}"/>
+											<Text id="_IDGenText72" text="{oOrderData>curr}"/>
+									</cells>
+								</ColumnListItem>
+							</items>
+							<layoutData>
+								<l:SplitterLayoutData id="_IDGenSplitterLayoutData12"  resizable="false" />
+							</layoutData>
+						</Table>
+				</FlexBox>
+
+		  </FlexBox>
+    </l:Splitter>
+
+</mvc:View>
