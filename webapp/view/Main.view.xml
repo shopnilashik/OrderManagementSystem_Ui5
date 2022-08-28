@@ -79,7 +79,19 @@
 				</subSections>
 			</ObjectPageSection>
 
+            
 
+			<ObjectPageSection id="ObjectPageSectionSimulate" titleUppercase="false" >
+				<subSections>
+					<ObjectPageSubSection id="ObjectPageSubSectionSimulate" titleUppercase="false">
+						<blocks>
+								<mvc:XMLView id="XMLViewSimulate" viewName="OrderSystem.ordersystem.view.Footer"></mvc:XMLView>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
 		</sections>
+
+		
     </ObjectPageLayout>
 </mvc:View>

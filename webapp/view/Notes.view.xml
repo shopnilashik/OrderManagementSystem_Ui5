@@ -3,25 +3,26 @@
     <l:Splitter id="_IDGenHorizontalLayout1" >
 
 
-		<FlexBox id="MainFlexBox" direction="Row" width="100%">
-				<FlexBox id="1" direction="Row"  width="30%">
+		    <FlexBox id="MainFlexBox" direction="Row" width="60%">
+				<FlexBox id="1" direction="Row"  class="sapUiMediumMarginEnd" width="40%">
 				    <FlexBox id="Left1" direction="Column" >
 						<Label id="_IDGenLabel1" text="Note Type"></Label>
-						<ComboBox id="selectSheet" >
+						<ComboBox id="selectSheet" items="{oOrderData>/Note}">
 							<items>
-								
+								<core:Item id="NoteType"  text="{oOrderData>type}" />
 							</items>
 						</ComboBox>
 				    </FlexBox>
 				</FlexBox>
 
 
-                <FlexBox id="RightTable" direction="Row"  width="80%">
-					<FlexBox id="Left12" direction="Column" >
+                <FlexBox id="RightTable" direction="Column"  width="90%">
+					<FlexBox id="Right12" direction="Column" >
 						<Label id="_IDGenLabel12" text="Note Text"></Label>
 						<TextArea id="_IDGenTextArea1"  rows="5" width="100%" />
 					</FlexBox>
-					 <Table id="_IDGenTable1" class="sapUiTinyMargin" items="{oOrderData>/Note}" width="90%" >
+                    <FlexBox id="Right123" direction="Column" >
+					 <Table id="_IDGenTable1" class="sapUiTinyMargin" items="{oOrderData>/Note}" width="98%" >
                             <columns>
                                 <Column id="_IDGenColumn1" >
                                     <Text id="_IDGenText1" text="Note Type"></Text>
@@ -46,9 +47,17 @@
                         
                             </items>
                         </Table>
-				</FlexBox>
+			      	</FlexBox>
 
-		  </FlexBox>
+				</FlexBox>
+                <FlexBox id="saveFlexBox" alignItems="End" justifyContent="Center" class="sapUiTinyMargin sapUiLargeMarginEnd customeSave" direction="Column" height="200px">
+					<Label id="_IDGenLabel9df" text=""></Label>
+                    <Button id="_IDGenButton1" icon="sap-icon://save" type="Transparent"  ></Button>
+				   </FlexBox> 
+
+                  
+		    </FlexBox>
+             
     </l:Splitter>
 
 </mvc:View>
