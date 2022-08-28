@@ -1,8 +1,8 @@
 <mvc:View controllerName="OrderSystem.ordersystem.controller.Main"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.uxap"  xmlns:layout="sap.ui.layout" 
-	xmlns:m="sap.m">
-    <ObjectPageLayout id="ObjectPageLayout" enableLazyLoading="true" upperCaseAnchorBar="false">
+	xmlns:m="sap.m" height="100%"> 
+    <ObjectPageLayout id="ObjectPageLayout" class="customeSave" enableLazyLoading="false" upperCaseAnchorBar="false"  headerContentPinnable="true">
     <headerTitle>
 			<ObjectPageDynamicHeaderTitle id="_IDGenObjectPageDynamicHeaderTitle1">
 				<heading>
@@ -15,13 +15,13 @@
    
         <sections>
 			<ObjectPageSection id="ObjectPageSectionHeader" titleUppercase="false" title="Header">
-				<subSections>
+		
 					<ObjectPageSubSection id="ObjectPageSubSectionHeader" titleUppercase="false">
 						<blocks>
 								<mvc:XMLView id="XMLView1Header" viewName="OrderSystem.ordersystem.view.Header"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
-				</subSections>
+			
 			</ObjectPageSection>
 
 
@@ -70,28 +70,14 @@
 
 
 				<ObjectPageSection id="ObjectPageSectionNotes" titleUppercase="false" title="Notes">
-				<subSections>
+				
 					<ObjectPageSubSection id="ObjectPageSubSectionNotes" titleUppercase="false">
 						<blocks>
 								<mvc:XMLView id="XMLViewNotes" viewName="OrderSystem.ordersystem.view.Notes"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
-				</subSections>
-			</ObjectPageSection>
-
-            
-
-			<ObjectPageSection id="ObjectPageSectionSimulate" titleUppercase="false" >
-				<subSections>
-					<ObjectPageSubSection id="ObjectPageSubSectionSimulate" titleUppercase="false">
-						<blocks>
-								<mvc:XMLView id="XMLViewSimulate" viewName="OrderSystem.ordersystem.view.Footer"></mvc:XMLView>
-						</blocks>
-					</ObjectPageSubSection>
-				</subSections>
+				
 			</ObjectPageSection>
 		</sections>
-
-		
     </ObjectPageLayout>
 </mvc:View>
