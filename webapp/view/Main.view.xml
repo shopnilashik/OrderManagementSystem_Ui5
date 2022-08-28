@@ -26,46 +26,46 @@
 
 
             	<ObjectPageSection id="ObjectPageSectionItem" titleUppercase="false" title="Items">
-				<subSections>
+				
 					<ObjectPageSubSection id="ObjectPageSubSectionItem" titleUppercase="false">
 						<blocks>
 								<mvc:XMLView id="XMLViewItem" viewName="OrderSystem.ordersystem.view.Item"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
-				</subSections>
+		
 			</ObjectPageSection>
 
 
 				<ObjectPageSection id="ObjectPageSectionPromoVistex" titleUppercase="false" title="Promo Vistex">
-				<subSections>
+				
 					<ObjectPageSubSection id="ObjectPageSubSectionPromoVistex" titleUppercase="false">
 						<blocks>
 								<mvc:XMLView id="XMLViewPromoVistex" viewName="OrderSystem.ordersystem.view.PromoVistex"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
-				</subSections>
+			
 			</ObjectPageSection>
             
 
 			<ObjectPageSection id="ObjectPageSectionHeaderPricing" titleUppercase="false" title="Header Pricing">
-				<subSections>
+				
 					<ObjectPageSubSection id="ObjectPageSubSectionHeaderPricing" titleUppercase="false">
 						<blocks>
 								<mvc:XMLView id="XMLViewHeaderPricing" viewName="OrderSystem.ordersystem.view.HeaderPricing"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
-				</subSections>
+				
 			</ObjectPageSection>
 
 
 			<ObjectPageSection id="ObjectPageSectionPartners" titleUppercase="false" title="Partners">
-				<subSections>
+				
 					<ObjectPageSubSection id="ObjectPageSubSectionPartners" titleUppercase="false">
 						<blocks>
 								<mvc:XMLView id="XMLViewPartners" viewName="OrderSystem.ordersystem.view.Partners"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
-				</subSections>
+				
 			</ObjectPageSection>
 
 
