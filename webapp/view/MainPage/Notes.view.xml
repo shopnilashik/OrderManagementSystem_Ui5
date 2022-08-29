@@ -1,4 +1,4 @@
-<mvc:View controllerName="OrderSystem.ordersystem.controller.Notes"
+<mvc:View controllerName="OrderSystem.ordersystem.controller.MainPage.Notes"
  xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
     
 

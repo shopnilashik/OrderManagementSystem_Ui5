@@ -95,10 +95,15 @@
       "routes": [
         {
           "name": "RouteMain",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
             "TargetMain"
           ]
+        },
+        {
+          "name": "ItemPage",
+          "pattern": "ItemPage",
+          "target": ["TargetItemPage"]
         }
       ],
       "targets": {
@@ -108,6 +113,13 @@
           "clearControlAggregation": false,
           "viewId": "Main",
           "viewName": "Main"
+        },
+        "TargetItemPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "ItemPage",
+          "viewName": "ItemPage/ItemPage"
         }
       }
     },

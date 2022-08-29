@@ -18,7 +18,7 @@
 		
 					<ObjectPageSubSection id="ObjectPageSubSectionHeader" titleUppercase="false">
 						<blocks>
-								<mvc:XMLView id="XMLView1Header" viewName="OrderSystem.ordersystem.view.Header"></mvc:XMLView>
+								<mvc:XMLView id="XMLView1Header" viewName="OrderSystem.ordersystem.view.MainPage.Header"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
 			
@@ -29,7 +29,7 @@
 				
 					<ObjectPageSubSection id="ObjectPageSubSectionItem" titleUppercase="false">
 						<blocks>
-								<mvc:XMLView id="XMLViewItem" viewName="OrderSystem.ordersystem.view.Item"></mvc:XMLView>
+								<mvc:XMLView id="XMLViewItem" viewName="OrderSystem.ordersystem.view.MainPage.Item"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
 		
@@ -40,7 +40,7 @@
 				
 					<ObjectPageSubSection id="ObjectPageSubSectionPromoVistex" titleUppercase="false">
 						<blocks>
-								<mvc:XMLView id="XMLViewPromoVistex" viewName="OrderSystem.ordersystem.view.PromoVistex"></mvc:XMLView>
+								<mvc:XMLView id="XMLViewPromoVistex" viewName="OrderSystem.ordersystem.view.MainPage.PromoVistex"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
 			
@@ -51,7 +51,7 @@
 				
 					<ObjectPageSubSection id="ObjectPageSubSectionHeaderPricing" titleUppercase="false">
 						<blocks>
-								<mvc:XMLView id="XMLViewHeaderPricing" viewName="OrderSystem.ordersystem.view.HeaderPricing"></mvc:XMLView>
+								<mvc:XMLView id="XMLViewHeaderPricing" viewName="OrderSystem.ordersystem.view.MainPage.HeaderPricing"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
 				
@@ -62,7 +62,7 @@
 				
 					<ObjectPageSubSection id="ObjectPageSubSectionPartners" titleUppercase="false">
 						<blocks>
-								<mvc:XMLView id="XMLViewPartners" viewName="OrderSystem.ordersystem.view.Partners"></mvc:XMLView>
+								<mvc:XMLView id="XMLViewPartners" viewName="OrderSystem.ordersystem.view.MainPage.Partners"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
 				
@@ -73,7 +73,7 @@
 				
 					<ObjectPageSubSection id="ObjectPageSubSectionNotes" titleUppercase="false">
 						<blocks>
-								<mvc:XMLView id="XMLViewNotes" viewName="OrderSystem.ordersystem.view.Notes"></mvc:XMLView>
+								<mvc:XMLView id="XMLViewNotes" viewName="OrderSystem.ordersystem.view.MainPage.Notes"></mvc:XMLView>
 						</blocks>
 					</ObjectPageSubSection>
 				

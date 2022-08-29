@@ -1,0 +1,118 @@
+<mvc:View controllerName="OrderSystem.ordersystem.controller.ItemPage.Partners"
+ xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
+    <l:Splitter id="_IDGenHorizontalLayout1" >
+       
+
+		<FlexBox id="MainFlexBox" direction="Row" width="100%">
+				<FlexBox id="LeftTable" direction="Row"  width="50%">
+				<Table id="_IDGenTable1" class="sapUiTinyMarginEnd" items="{oOrderData>/Partners}">
+						
+						<columns>
+							<Column id="_IDGenColumn3" >
+								<Text id="_IDGenText3" text="Partner Name"></Text>
+							</Column>
+							<Column id="_IDGenColumn1" >
+								<Text id="_IDGenText1" text="Partner Role" ></Text>
+							</Column>
+							<Column id="_IDGenColumn2" >
+								<Text id="_IDGenText2" text="Role Desc"></Text>
+							</Column>
+				
+						</columns>
+						<items>
+							<ColumnListItem id="_IDGenColumnListItem1" >
+								<cells>
+									<ObjectNumber id="_IDGenObjectNumber1" number="{oOrderData>partnerName}" emphasized="false"/>
+										<Text id="_IDGenText51" text="{oOrderData>partnerRole}"/>
+										<Text id="_IDGenText61" text="{oOrderData>roleDesc}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<layoutData>
+							<l:SplitterLayoutData id="_IDGenSplitterLayoutData1"  resizable="false" />
+						</layoutData>
+					</Table>
+				</FlexBox>
+
+				<FlexBox id="ShiptoFlexBox"  class="sapUiLargeMarginBegin" direction="Column" width="50%">
+					
+						<FlexBox id="_IDGenVBox"  class="sapUiSmallMarginBottom" direction="Column" width="30%">
+							<items>
+								<Label id="_IDGenLabel" text="Ship-to"></Label>
+								<ComboBox id="selectShee7" enabled="true" width="100%" items="{oOrderData>/ShipTo}">
+									<items>
+										<core:Item id="PYMNTConditionItem"  text="{oOrderData>name}" />
+									</items>
+								</ComboBox>
+							</items>
+						</FlexBox>
+
+
+						<FlexBox id="FlexBoxAddressLine1"  class="" direction="Column" width="98%">
+							<items>
+								<Label id="LebelAddressLine1" text="SHIP-To Address Line1"></Label>
+								<Input id="InputAddressLine1"></Input>
+							</items>
+						</FlexBox>
+
+
+						<FlexBox id="FlexBoxAddressLine2"  class="" direction="Column" width="98%">
+							<items>
+								<Label id="LebelAddressLine2" text="SHIP-To Address Line2"></Label>
+								<Input id="InputAddressLine2"></Input>
+							</items>
+						</FlexBox>
+
+
+						<FlexBox id="FlexBoxAddressLine3"  class="" direction="Column" width="98%">
+							<items>
+								<Label id="LebelAddressLine3" text="SHIP-To Address Line3"></Label>
+								<Input id="InputAddressLine3"></Input>
+							</items>
+						</FlexBox>
+
+
+
+						<FlexBox id="GenVBoxCourier"  class="sapUiSmallMarginTop sapUiSmallMarginBottom" direction="Column" width="30%">
+							<items>
+								<Label id="LabelCourier" text="Courier-to"></Label>
+								<ComboBox id="selectSheeCourier" enabled="true" width="100%" items="{oOrderData>/ShipTo}">
+									<items>
+										<core:Item id="Courier"  text="{oOrderData>name}" />
+									</items>
+								</ComboBox>
+							</items>
+						</FlexBox>
+
+
+
+						<FlexBox id="FlexBoxCourierLine1"  class="" direction="Column" width="98%">
+							<items>
+								<Label id="LebelCourierLine1" text="Courier Address Line1"></Label>
+								<Input id="InputCourierLine1"></Input>
+							</items>
+						</FlexBox>
+
+
+						<FlexBox id="FlexBoxCourierLine2"  class="" direction="Column" width="98%">
+							<items>
+								<Label id="LebelCourierLine2" text="Courier Address Line2"></Label>
+								<Input id="InputCourierLine2"></Input>
+							</items>
+						</FlexBox>
+
+
+						<FlexBox id="FlexBoxCourierLine3"  class="" direction="Column" width="98%">
+							<items>
+								<Label id="LebelCourierLine3" text="Courier Address Line3"></Label>
+								<Input id="InputCourierLine3"></Input>
+							</items>
+						</FlexBox>
+
+
+				</FlexBox>
+
+		  </FlexBox>
+    </l:Splitter>
+
+</mvc:View>

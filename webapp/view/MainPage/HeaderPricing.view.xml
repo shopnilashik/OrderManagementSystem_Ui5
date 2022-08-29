@@ -1,4 +1,4 @@
-<mvc:View controllerName="OrderSystem.ordersystem.controller.HeaderPricing"
+<mvc:View controllerName="OrderSystem.ordersystem.controller.MainPage.HeaderPricing"
  xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout">
     <l:Splitter id="_IDGenHorizontalLayout1" >
 

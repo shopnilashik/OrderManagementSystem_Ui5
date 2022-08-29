@@ -1,0 +1,48 @@
+<mvc:View controllerName="OrderSystem.ordersystem.controller.ItemPage.ItemPage"
+  xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.uxap"  xmlns:layout="sap.ui.layout" 
+	xmlns:m="sap.m" height="100%">
+   	<m:Page id="page1">
+	<m:customHeader>
+            <m:OverflowToolbar id="_IDGenOverflowToolbar1" >  
+            <m:Button id="customer_back_button" type="Back"
+            press="onNavButton" />
+			<m:Title id="_IDGenTitle1" text="Item Details"/>
+            </m:OverflowToolbar>
+            </m:customHeader>
+ <ObjectPageLayout id="ObjectPageLayout" class="customeSave1" enableLazyLoading="false" upperCaseAnchorBar="false"  headerContentPinnable="true">
+
+     <sections>
+
+			    <ObjectPageSection id="ObjectPageSectionItem" titleUppercase="false" title="Header">
+			        <ObjectPageSubSection id="ObjectPageSubSectionItem" titleUppercase="false">
+						<blocks>
+								<mvc:XMLView id="XMLViewItem" viewName="OrderSystem.ordersystem.view.ItemPage.Item"></mvc:XMLView>
+						</blocks>
+					</ObjectPageSubSection>
+				</ObjectPageSection>
+
+
+
+				<ObjectPageSection id="ObjectPageSectionPricing" titleUppercase="false" title="Pricing">
+			        <ObjectPageSubSection id="ObjectPageSubSectionPricing" titleUppercase="false">
+						<blocks>
+								<mvc:XMLView id="XMLViewPricing" viewName="OrderSystem.ordersystem.view.ItemPage.Pricing"></mvc:XMLView>
+						</blocks>
+					</ObjectPageSubSection>
+				</ObjectPageSection> 
+
+                
+
+				<ObjectPageSection id="ObjectPageSectionPartners" titleUppercase="false" title="Partners">
+				<ObjectPageSubSection id="ObjectPageSubSectionPartners" titleUppercase="false">
+						<blocks>
+								<mvc:XMLView id="XMLViewPartners" viewName="OrderSystem.ordersystem.view.ItemPage.Partners"></mvc:XMLView>
+						</blocks>
+					</ObjectPageSubSection>
+				</ObjectPageSection>
+		</sections>
+      
+    </ObjectPageLayout>
+		</m:Page>
+</mvc:View>
