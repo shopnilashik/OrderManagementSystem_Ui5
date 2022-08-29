@@ -8,6 +8,10 @@ sap.ui.define(
 
     return Controller.extend("OrderSystem.ordersystem.controller.Main", {
       onInit: function () {
+         let element = this.byId(
+           "application-OrderSystemordersystem-display-component---Main--ObjectPageLayout-spacer"
+         );
+         console.log(element);
         var oJsonModel = new JSONModel({
           OrderType: [
             {
@@ -60,5 +64,7 @@ sap.ui.define(
         this.getView().setModel(oJsonModel, "ObjectPageModel");
       },
     });
+
+   
   }
 );

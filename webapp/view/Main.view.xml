@@ -1,8 +1,8 @@
-<mvc:View controllerName="OrderSystem.ordersystem.controller.Main"
+<mvc:View xmlns:simple="sap.gantt.simple" controllerName="OrderSystem.ordersystem.controller.Main"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.uxap"  xmlns:layout="sap.ui.layout" 
 	xmlns:m="sap.m" height="100%"> 
-    <ObjectPageLayout id="ObjectPageLayout" class="customeSave" enableLazyLoading="false" upperCaseAnchorBar="false"  headerContentPinnable="true">
+    <ObjectPageLayout id="ObjectPageLayout" class="customeSave1" enableLazyLoading="false" upperCaseAnchorBar="false"  headerContentPinnable="true">
     <headerTitle>
 			<ObjectPageDynamicHeaderTitle id="_IDGenObjectPageDynamicHeaderTitle1">
 				<heading>
@@ -11,7 +11,7 @@
 
          
 			</ObjectPageDynamicHeaderTitle>
-		</headerTitle>
+	</headerTitle>
    
         <sections>
 			<ObjectPageSection id="ObjectPageSectionHeader" titleUppercase="false" title="Header">
@@ -79,5 +79,6 @@
 				
 			</ObjectPageSection>
 		</sections>
+	
     </ObjectPageLayout>
 </mvc:View>
