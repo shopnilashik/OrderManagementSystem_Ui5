@@ -3,11 +3,13 @@ sap.ui.define(
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
     "sap/ui/core/Fragment",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator",
   ],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
    */
-  function (Controller, JSONModel, Fragment) {
+  function (Controller, JSONModel, Fragment, Filter, FilterOperator) {
     "use strict";
 
     return Controller.extend(
@@ -136,7 +138,7 @@ sap.ui.define(
               },
               {
                 partnerCode: "1410866423",
-                partner: "Partner Demo",
+                partner: " Demo",
                 prov: "TN",
                 city: "Trento",
                 village: "Italy",
@@ -165,6 +167,56 @@ sap.ui.define(
               oValueHelpDialog.open();
             }.bind(this)
           );
+        },
+        carrierToHandler: function () {
+          var oView = this.getView();
+          if (!this._pValueHelpDialogCarrier) {
+            this._pValueHelpDialogCarrier = Fragment.load({
+              id: oView.getId(),
+              name: "OrderSystem.ordersystem.view.fragment.carrierTo",
+              controller: this,
+            }).then(function (oValueHelpDialogCarrier) {
+              oView.addDependent(oValueHelpDialogCarrier);
+              return oValueHelpDialogCarrier;
+            });
+          }
+          this._pValueHelpDialogCarrier.then(
+            function (oValueHelpDialogCarrier) {
+              oValueHelpDialogCarrier.open();
+            }.bind(this)
+          );
+        },
+
+        handleSearch: function (oEvent) {
+          var sValue = oEvent.getParameter("value");
+          var oFilter = new Filter("partner", FilterOperator.Contains, sValue);
+          var oBinding = oEvent.getSource().getBinding("items");
+          oBinding.filter([oFilter]);
+        },
+
+        handleValueHelpClose: function (oEvent) {
+          var oSelectedItem = oEvent.getParameter("selectedItem"),
+            oInput = this.byId("shipToInput");
+
+          if (!oSelectedItem) {
+            oInput.resetProperty("value");
+            return;
+          }
+
+          oInput.setValue(oSelectedItem.getCells()[0].getTitle());
+        },
+
+        handleValueHelpCloseCarrier: function (oEvent) {
+         
+          var oSelectedItem = oEvent.getParameter("selectedItem"),
+            oInput = this.byId("CarrierToInput");
+
+          if (!oSelectedItem) {
+            oInput.resetProperty("value");
+            return;
+          }
+
+          oInput.setValue(oSelectedItem.getCells()[0].getTitle());
         },
       }
     );

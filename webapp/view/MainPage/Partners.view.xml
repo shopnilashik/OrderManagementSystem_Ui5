@@ -54,11 +54,14 @@
 					<FlexBox id="_IDGenVBox"  class="sapUiTinyMargin" direction="Column" width="40%">
 						<items>
 							<Label id="_IDGenLabel" text="Ship-to (ship-to-code)"></Label>
-							<ComboBox id="selectShee7" enabled="true" width="100%" items="{oOrderData>/ShipTo}">
-								<items>
-									<core:Item id="PYMNTConditionItem"  text="{oOrderData>name}" />
-								</items>
-							</ComboBox>
+							<Input
+									id="shipToInput"
+									type="Text"
+									showValueHelp="true"
+									valueHelpOnly="true"
+									valueHelpRequest="shipToHandler"
+									width="12.5rem"
+									class="sapUiSmallMarginBottom"/>
 						</items>
 					</FlexBox>
 
@@ -113,11 +116,14 @@
                              <FlexBox id="FlexBox5.1" class="sapUiTinyMargin" direction="Column"  width="40%">
 								<items>
 									<Label id="LebelCARRIR" text="Carrier(carrier code)"></Label>
-									<ComboBox id="selectCARRIR" enabled="true" width="100%" items="{oOrderData>/customerCode}">
-										<items>
-											<core:Item id="CARRIR"  text="{oOrderData>code}" />
-										</items>
-									</ComboBox>
+									<Input
+									id="CarrierToInput"
+									type="Text"
+									showValueHelp="true"
+									valueHelpOnly="true"
+									valueHelpRequest="carrierToHandler"
+									width="12.5rem"
+									class="sapUiSmallMarginBottom"/>
 								</items>
 							</FlexBox>
 							<FlexBox id="FlexBox5.2" class="sapUiTinyMargin" direction="Column"  width="60%">
