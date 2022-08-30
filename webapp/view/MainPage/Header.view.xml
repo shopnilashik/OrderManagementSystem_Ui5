@@ -94,11 +94,14 @@
 					<FlexBox id="_IDGenVBox"  class="sapUiTinyMargin" direction="Column" width="40%">
 						<items>
 							<Label id="_IDGenLabel" text="Ship-to (ship-to-code)"></Label>
-							<ComboBox id="selectShee7" enabled="true" width="100%" items="{oOrderData>/ShipTo}">
-								<items>
-									<core:Item id="PYMNTConditionItem"  text="{oOrderData>name}" />
-								</items>
-							</ComboBox>
+							<Input
+									id="productInput"
+									type="Text"
+									showValueHelp="true"
+									valueHelpOnly="true"
+									valueHelpRequest="shipToHandler"
+									width="12.5rem"
+									class="sapUiSmallMarginBottom"/>
 						</items>
 					</FlexBox>
 

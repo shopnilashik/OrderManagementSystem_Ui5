@@ -75,7 +75,6 @@
 						</FlexBox>
 
 
-
 						<FlexBox id="GenVBoxCourier"  class="sapUiSmallMarginTop sapUiSmallMarginBottom" direction="Column" width="30%">
 							<items>
 								<Label id="LabelCourier" text="Courier-to"></Label>
@@ -86,7 +85,6 @@
 								</ComboBox>
 							</items>
 						</FlexBox>
-
 
 
 						<FlexBox id="FlexBoxCourierLine1"  class="" direction="Column" width="98%">

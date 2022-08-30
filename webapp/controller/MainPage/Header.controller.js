@@ -1,9 +1,13 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel"],
+  [
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/core/Fragment",
+  ],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
    */
-  function (Controller, JSONModel) {
+  function (Controller, JSONModel, Fragment) {
     "use strict";
 
     return Controller.extend(
@@ -102,8 +106,65 @@ sap.ui.define(
                 name: "Carrir 1",
               },
             ],
+            shipToData: [
+              {
+                partnerCode: "1410866423",
+                partner: "Partner Demo",
+                prov: "TN",
+                city: "Trento",
+                village: "Italy",
+                address: "via frischin 3",
+                postalCode: "39100",
+              },
+              {
+                partnerCode: "1410866423",
+                partner: "Partner Demo",
+                prov: "TN",
+                city: "Trento",
+                village: "Italy",
+                address: "via frischin 3",
+                postalCode: "39100",
+              },
+              {
+                partnerCode: "1410866423",
+                partner: "Partner Demo",
+                prov: "TN",
+                city: "Trento",
+                village: "Italy",
+                address: "via frischin 3",
+                postalCode: "39100",
+              },
+              {
+                partnerCode: "1410866423",
+                partner: "Partner Demo",
+                prov: "TN",
+                city: "Trento",
+                village: "Italy",
+                address: "via frischin 3",
+                postalCode: "39100",
+              },
+            ],
           });
           this.getView().setModel(oJsonModel, "oOrderData");
+        },
+        shipToHandler: function () {
+          var oView = this.getView();
+
+          if (!this._pValueHelpDialog) {
+            this._pValueHelpDialog = Fragment.load({
+              id: oView.getId(),
+              name: "OrderSystem.ordersystem.view.fragment.shipTo",
+              controller: this,
+            }).then(function (oValueHelpDialog) {
+              oView.addDependent(oValueHelpDialog);
+              return oValueHelpDialog;
+            });
+          }
+          this._pValueHelpDialog.then(
+            function (oValueHelpDialog) {
+              oValueHelpDialog.open();
+            }.bind(this)
+          );
         },
       }
     );
