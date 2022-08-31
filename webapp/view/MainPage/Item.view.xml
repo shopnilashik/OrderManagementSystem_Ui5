@@ -11,11 +11,14 @@
 
 				<FlexBox id="ProductFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
 					<Label id="_IDGenLabel1" text="Product"></Label>
-					 <ComboBox id="selectSheet" width="100%" items="{oOrderData>/Product}">
-						<items >
-							<core:Item id="Productitems"  text="{oOrderData>name}" />
-						</items>
-                    </ComboBox>
+					<Input
+									id="ProductInput"
+									type="Text"
+									showValueHelp="true"
+									valueHelpOnly="true"
+									valueHelpRequest="productHandler"
+									width="12.5rem"
+									class="sapUiSmallMarginBottom"/>
 				</FlexBox>
 
 				<FlexBox id="QtyFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
