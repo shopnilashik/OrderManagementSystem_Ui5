@@ -17,7 +17,7 @@
 									showValueHelp="true"
 									valueHelpOnly="true"
 									valueHelpRequest="productHandler"
-									width="12.5rem"
+									width="8rem"
 									class="sapUiSmallMarginBottom"/>
 				</FlexBox>
 
@@ -44,7 +44,7 @@
 
 				<FlexBox id="CategoryFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
 					<Label id="LabelCategory" text="Product"></Label>
-					 <ComboBox id="selectCategory" width="100%" items="{oOrderData>/Category}">
+					 <ComboBox id="selectCategory212" width="100%" items="{oOrderData>/Category}">
 						<items >
 							<core:Item id="Categoryitems"  text="{oOrderData>item}" />
 						</items>
@@ -54,11 +54,14 @@
 
 				<FlexBox id="BatchFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
 					<Label id="LabelBatch" text="Batch"></Label>
-					 <ComboBox id="selectBatch" width="100%" items="{oOrderData>/Batch}">
-						<items >
-							<core:Item id="Batchitems"  text="{oOrderData>code}" />
-						</items>
-                    </ComboBox>
+					<Input
+									id="BatchInput"
+									type="Text"
+									showValueHelp="true"
+									valueHelpOnly="true"
+									valueHelpRequest="batchHandler"
+									width="8rem"
+									class="sapUiSmallMarginBottom"/>
 				</FlexBox>
 
 

@@ -1,0 +1,49 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" xmlns:c="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:ui="sap.ui" 
+   xmlns:f="sap.ui.layout.form">
+  
+<Dialog
+		id="ChoiceDialog"
+		title="Choice / Tone / Manual Caliber">
+        
+		<FlexBox id="ChoicecolumnhFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  direction="Row" >
+                      <FlexBox id="ChoiceFlexBox1" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  direction="Column" >
+						<Label id="LabelChoiceDialog" text="Choice"></Label>
+						<ComboBox id="selectChoiceDialog" width="100%" >
+							<items >
+								<core:Item id="ChoicehItem1" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+
+					 <FlexBox id="ApplicationFlexBox1" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  direction="Column" >
+						<Label id="LabelApplicationDialog" text="Application"></Label>
+						<ComboBox id="selectApplicationDialog" width="100%" >
+							<items >
+								<core:Item id="ApplicationItem1" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+
+					 <FlexBox id="CaliberFlexBox1" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  direction="Column" >
+						<Label id="LabelCaliberDialog" text="Caliber"></Label>
+						<ComboBox id="selectCaliberDialog" width="100%" >
+							<items >
+								<core:Item id="CaliberItem1" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+		</FlexBox>
+	
+        <Bar id="_IDGenBar112">
+			<contentRight>
+				<Button id="SaveButton" text="Save" design="Transparent" ></Button>
+				
+			</contentRight>
+        </Bar>
+ 
+	</Dialog>
+</core:FragmentDefinition>

@@ -19,13 +19,14 @@
 				<Text id="_IDGenText42" text="{oOrderData>gerlevel2}" />
 				<Text id="_IDGenText52" text="{oOrderData>gerlevel3}" />
 				<Text id="_IDGenText62" text="{oOrderData>gerlevel4}" />
-				<Text id="_IDGenText62" text="{oOrderData>gerlevel4}" />
-				<Text id="_IDGenText62" text="{oOrderData>gerlevel4}" />
-				<Text id="_IDGenText62" text="{oOrderData>gerlevel4}" />
-				<Text id="_IDGenText62" text="{oOrderData>gerlevel4}" />
-				<Text id="_IDGenText62" text="{oOrderData>gerlevel4}" />
-				<Text id="_IDGenText62" text="{oOrderData>gerlevel4}" />
-				<Text id="_IDGenText62" text="{oOrderData>gerlevel4}" />
+				<Text id="_IDGenText63" text="{oOrderData>attribute1}" />
+				<Text id="_IDGenText64" text="{oOrderData>attribute2}" />
+				<Text id="_IDGenText65" text="{oOrderData>attribute3}" />
+				<Text id="_IDGenText66" text="{oOrderData>attribute4}" />
+				<Text id="_IDGenText67" text="{oOrderData>attribute5}" />
+				<Text id="_IDGenText68" text="{oOrderData>UoMSale}" />
+				<Text id="_IDGenText69" text="{oOrderData>priceList}" />
+				<Text id="_IDGenText70" text="{oOrderData>discount}" />
 				
 			</cells>
 		</ColumnListItem>
@@ -37,7 +38,7 @@
 			</Column>
 			<Column id="_IDGenColumn22" minScreenWidth="Tablet" demandPopin="true">
 				<header>
-					<Text id="_IDGenText82" text="{i18n>partner}" />
+					<Text id="_IDGenText82" text="{i18n>product}" />
 				</header>
 			</Column>
 			<Column id="_IDGenColumn32"
@@ -45,7 +46,7 @@
 				demandPopin="true"
 				hAlign="End">
 				<header>
-					<Text id="_IDGenText92" text="{i18n>prov}" />
+					<Text id="_IDGenText92" text="{i18n>materialGroup}" />
 				</header>
 			</Column>
 			<Column id="_IDGenColumn42"
@@ -53,29 +54,67 @@
 				demandPopin="true"
 				hAlign="Center">
 				<header>
-					<Text id="_IDGenText102" text="{i18n>city}" />
+					<Text id="_IDGenText102" text="{i18n>gerlevel1}" />
 				</header>
 			</Column>
 			<Column id="_IDGenColumn52" hAlign="End">
 				<header>
-					<Text id="_IDGenText112" text="{i18n>village}" />
+					<Text id="_IDGenText112" text="{i18n>gerlevel2}" />
 				</header>
 			</Column>
             <Column id="_IDGenColumn62" hAlign="End">
 				<header>
-					<Text id="_IDGenText122" text="{i18n>address}" />
+					<Text id="_IDGenText122" text="{i18n>gerlevel3}" />
 				</header>
 			</Column>
             <Column id="_IDGenColumn72" hAlign="End">
 				<header>
-					<Text id="_IDGenText132" text="{i18n>postalCode}" />
+					<Text id="_IDGenText133" text="{i18n>gerlevel4}" />
 				</header>
 			</Column>
+			<Column id="_IDGenColumn73" hAlign="End">
+				<header>
+					<Text id="_IDGenText134" text="{i18n>attribute1}" />
+				</header>
+			</Column>
+			<Column id="_IDGenColumn74" hAlign="End">
+				<header>
+					<Text id="_IDGenText135" text="{i18n>attribute2}" />
+				</header>
+			</Column>
+			<Column id="_IDGenColumn75" hAlign="End">
+				<header>
+					<Text id="_IDGenText136" text="{i18n>attribute3}" />
+				</header>
+			</Column>
+			<Column id="_IDGenColumn76" hAlign="End">
+				<header>
+					<Text id="_IDGenText137" text="{i18n>attribute4}" />
+				</header>
+			</Column>
+			<Column id="_IDGenColumn777" hAlign="End">
+				<header>
+					<Text id="_IDGenText138" text="{i18n>attribute5}" />
+				</header>
+			</Column>
+			<Column id="_IDGenColumn78" hAlign="End">
+				<header>
+					<Text id="_IDGenText139" text="{i18n>UoMSale}" />
+				</header>
+			</Column>
+			<Column id="_IDGenColumn79" hAlign="End">
+				<header>
+					<Text id="_IDGenText140" text="{i18n>priceList}" />
+				</header>
+			</Column>
+			<Column id="_IDGenColumn80" hAlign="End">
+				<header>
+					<Text id="_IDGenText141" text="{i18n>discount}" />
+				</header>
+			</Column>
+			
+
 		</columns>
 	</TableSelectDialog>
        
-   
-  
-         
-
 </core:FragmentDefinition>

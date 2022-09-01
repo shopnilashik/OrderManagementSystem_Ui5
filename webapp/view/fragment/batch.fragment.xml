@@ -1,0 +1,291 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" xmlns:c="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:ui="sap.ui" 
+   xmlns:f="sap.ui.layout.form">
+  
+<Dialog
+		id="helloDialog"
+		title="Match">
+        
+		<FlexBox id="batchFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+		    <!-- column 1 -->
+			<FlexBox id="columnhFlexBox1"  class="sapUiTinyMargin"  alignItems="Start" justifyContent="SpaceBetween" direction="Row" width="100%">
+				<FlexBox id="columnhFlexBoxInner" alignContent="Start" alignItems="Start"  justifyContent="Start" direction="Row" >
+						<FlexBox id="columnhFlexBox1.1" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  >
+
+							<FlexBox id="TotalMTSFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+								<Label id="_IDGenLabelTotalMTS" text="Total MTS"></Label>
+								<Input id="InputTotalMTS"></Input>
+							</FlexBox>
+						</FlexBox>
+
+						<FlexBox id="columnhFlexBox1.2" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  >
+
+							<FlexBox id="QtyAvailableFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  direction="Column">
+								<Label id="_IDGenLabelQtyAvailable" text="Qty Available"></Label>
+								<Input id="InputQtyAvailable"></Input>
+							</FlexBox>
+						</FlexBox>
+
+						<FlexBox id="columnhFlexBox1.3" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  >
+
+							<FlexBox id="NextproductiondateFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  direction="Column">
+								<Label id="_IDGenLabelNextproductiondate" text="Next production date"></Label>
+								<Input id="InputNextproductiondate"></Input>
+							</FlexBox>
+						</FlexBox>
+
+                </FlexBox>
+
+					<FlexBox id="columnhFlexBox1.4"  class="sapUiTinyMargin "  alignContent="Start" alignItems="Start"   >
+						<FlexBox id="columnhFlexBox1.42" class="sapUiTinyMargin"   >
+							<FlexBox id="manualentryFlexBox"  class="sapUiTinyMargin"   >
+									<Button id="manualentryButton" text="Manual Entry" press="ManualEntryHandler"  ></Button>
+							</FlexBox>
+						</FlexBox>
+					</FlexBox>
+				
+		    </FlexBox>
+			    
+
+
+          <!-- column row2  -->
+			<FlexBox id="columnhFlexBox1.23" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Row" >
+				<FlexBox id="columnhFlexBox1.24" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  >
+
+					<FlexBox id="MTOTotalFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Label id="_IDGenLabelMTOTotal" text="MTO Total"></Label>
+						<Input id="InputTotalMTOTotal"></Input>
+					</FlexBox>
+				</FlexBox>
+
+				<FlexBox id="columnhFlexBox1.25" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  >
+
+					<FlexBox id="QtyProducedFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start"  direction="Column">
+						<Label id="_IDGenLabelQtyProduced" text="Qty Produced"></Label>
+						<Input id="InputQtyProduced"></Input>
+					</FlexBox>
+				</FlexBox>
+
+			</FlexBox>
+			<!-- column 2 -->
+			<FlexBox id="column2" alignContent="Start" alignItems="Start" class="sapUiTinyMargin " justifyContent="Start"  >
+	    	
+			 		<Table id="BachTable1" class="sapUiTinyMarginEnd" items="{oOrderData>/BatchTable}">
+					
+						<columns>
+							<Column id="BatchTableColumn801" >
+								<Text id="BatchText" text="Document Date" ></Text>
+							</Column>
+							<Column id="BatchTableColumn802" >
+								<Text id="BatchText2" text="External Ref"></Text>
+							</Column>
+							<Column id="BatchTableColumn803" >
+								<Text id="BatchText3" text="Choice"></Text>
+							</Column>
+							<Column id="BatchTableColumn804" >
+								<Text id="BatchText4" text="Application"></Text>
+							</Column>
+							<Column id="BatchTableColumn805" >
+								<Text id="BatchText4.1" text="Caliber"></Text>
+							</Column>
+							<Column id="BatchTableColumn806" >
+								<Text id="BatchText4.2" text="Quantity"></Text>
+							</Column>
+							<Column id="BatchTableColumn807" >
+								<Text id="BatchText4.3" text="Filter"></Text>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem id="BatchTableColumn80ListItem1" >
+								<cells>
+									<ObjectNumber id="_IDGenObjectNumber12" number="{oOrderData>documentDate}" emphasized="false"/>
+										<Text id="BatchText5" text="{oOrderData>externalRef}"/>
+										<Text id="BatchText6" text="{oOrderData>choice}"/>
+										<Text id="BatchText7" text="{oOrderData>application}"/>
+										<Text id="BatchText8" text="{oOrderData>caliber}"/>
+										<Text id="BatchText9" text="{oOrderData>quantity}"/>
+										<CheckBox id="Table2CheckBox1.21"  ></CheckBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<layoutData>
+							<l:SplitterLayoutData id="Batch2SplitterLayoutData1"  resizable="false" />
+						</layoutData>
+					</Table>   
+	
+			</FlexBox>
+			<!-- column 3  -->
+			<FlexBox id="columnFlexBox3" alignContent="Start" alignItems="Start" class="sapUiTinyMargin sapUiMediumMarginTop" justifyContent="Start" direction="Row" >
+
+	    			<FlexBox id="ChoiceFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Label id="LabelChoice" text="Choice"></Label>
+						<ComboBox id="selectChoice" width="100%" >
+							<items >
+								<core:Item id="BatchItem1" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+					<FlexBox id="ApplicationFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Label id="LabelApplication" text="Application"></Label>
+						<ComboBox id="selectApplication" width="100%" >
+							<items >
+								<core:Item id="BatchItem2" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+
+					<FlexBox id="CategoryFlexBox1" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Label id="LabelCategory1" text="Product"></Label>
+						<ComboBox id="selectBatchCategory1" width="100%">
+							<items >
+								<core:Item id="BatchItem3" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+
+					<FlexBox id="CaliberFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Label id="LabelCaliber" text="Caliber"></Label>
+						<ComboBox id="selectCaliber" width="100%" >
+							<items >
+								<core:Item id="BatchItem4" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+
+					<FlexBox id="Attribute1FlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Label id="LabelAttribute1" text="Attribute 1"></Label>
+						<ComboBox id="selectAttribute1" width="100%" >
+							<items >
+								<core:Item id="BatchItem10" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+
+					<FlexBox id="Attribute2FlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Label id="LabelAttribute2" text="Attribute 2"></Label>
+						<ComboBox id="selectAttribute2" width="100%" >
+							<items >
+								<core:Item id="BatchItem6" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+
+					<FlexBox id="Attribute3FlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Label id="LabelAttribute3" text="Attribute 3"></Label>
+						<ComboBox id="selectAttribute3" width="100%" >
+							<items >
+								<core:Item id="BatchItem7" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+
+					<FlexBox id="DivisionFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Label id="LabelDivision" text="Division"></Label>
+						<ComboBox id="selectDivision" width="100%" >
+							<items >
+								<core:Item id="BatchItem8" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+
+					<FlexBox id="WarehouseFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Label id="LabelWarehouse" text="Warehouse"></Label>
+						<ComboBox id="selectWarehouse" width="100%" >
+							<items >
+								<core:Item id="BatchItem9" xmlns:core="sap.ui.core" key="item-1-key" text="Item 1 Text" />
+							</items>
+						</ComboBox>
+					</FlexBox>
+
+
+					<FlexBox id="IgnoreFlexBox" alignItems="Center" justifyContent="Center" class="customIgnore" direction="Column" height="90px">
+						<FlexBox id="IgnoreFlexBox1" alignItems="Center" justifyContent="Center" class="sapUiTinyMargin" direction="Row" >
+							<CheckBox id="IgnoreCheckBox1.21"  ></CheckBox>
+							<Label id="LabelIgnore" text="Ignore minimum quantity"></Label>
+							
+						</FlexBox>
+
+						<FlexBox id="IgnoreFlexBox1.2" alignItems="Center" justifyContent="Center" class="sapUiTinyMargin " direction="Row" >
+							<Button id="OrButton" text="Or"   ></Button>
+					    </FlexBox>
+					</FlexBox>
+			
+			
+			
+			
+			</FlexBox>
+			<!-- column 4 -->
+			<FlexBox id="columnFlexBox4" alignContent="Start" alignItems="Start" class="sapUiTinyMargin " justifyContent="Start" >
+	    	
+			<Table id="BachTable2" class="sapUiTinyMarginEnd" items="{oOrderData>/BatchTable}">
+					
+						<columns>
+							<Column id="BatchTable2Column801" >
+								<Text id="Batch2Text" text="Document Date" ></Text>
+							</Column>
+							<Column id="BatchTable2Column802" >
+								<Text id="Batch2Text2" text="External Ref"></Text>
+							</Column>
+							<Column id="BatchTable2Column803" >
+								<Text id="Batch2Text3" text="Choice"></Text>
+							</Column>
+							<Column id="BatchTable2Column804" >
+								<Text id="Batch2Text4" text="Application"></Text>
+							</Column>
+							<Column id="BatchTable2Column805" >
+								<Text id="Batch2Text4.1" text="Caliber"></Text>
+							</Column>
+							<Column id="BatchTable2Column806" >
+								<Text id="Batch2Text4.2" text="Quantity"></Text>
+							</Column>
+							<Column id="BatchTable2Column807" >
+								<Text id="Batch2Text4.3" text="Filter"></Text>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem id="BatchTable2Column80ListItem1" >
+								<cells>
+									<ObjectNumber id="_IDGenObjectNumber1" number="{oOrderData>documentDate}" emphasized="false"/>
+										<Text id="Batch2Text5" text="{oOrderData>externalRef}"/>
+										<Text id="Batch2Text6" text="{oOrderData>choice}"/>
+										<Text id="Batch2Text7" text="{oOrderData>application}"/>
+										<Text id="Batch2Text8" text="{oOrderData>caliber}"/>
+										<Text id="Batch2Text9" text="{oOrderData>quantity}"/>
+										<CheckBox id="_IDGenCheckBox1.21"  ></CheckBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<layoutData>
+							<l:SplitterLayoutData id="BatchSplitterLayoutData1"  resizable="false" />
+						</layoutData>
+					</Table>   
+	
+			</FlexBox>
+           
+
+
+		   <!-- Column 4 -->
+				<FlexBox id="columnFlexBox5" alignContent="Start" alignItems="Start" class="sapUiTinyMargin " justifyContent="End" width="100%">
+					<FlexBox id="columnhFlexBox4.1"  class="sapUiTinyMargin "    >
+							<FlexBox id="columnhFlexBox42.1" class="sapUiTinyMargin"   >
+								<FlexBox id="ToSaveFlexBox"  class="sapUiTinyMargin"   >
+										<Button id="ToSaveButton" text="To Save"   ></Button>
+								</FlexBox>
+							</FlexBox>
+						</FlexBox>
+
+				</FlexBox>	
+
+
+		</FlexBox>	
+	</Dialog>
+</core:FragmentDefinition>
