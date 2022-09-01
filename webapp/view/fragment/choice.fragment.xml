@@ -40,7 +40,7 @@
 	
         <Bar id="_IDGenBar112">
 			<contentRight>
-				<Button id="SaveButton" text="Save" design="Transparent" ></Button>
+				<Button id="SaveButton" text="Save" design="Transparent" press="onSaveButton"></Button>
 				
 			</contentRight>
         </Bar>

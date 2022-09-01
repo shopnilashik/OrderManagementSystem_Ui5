@@ -278,7 +278,7 @@
 					<FlexBox id="columnhFlexBox4.1"  class="sapUiTinyMargin "    >
 							<FlexBox id="columnhFlexBox42.1" class="sapUiTinyMargin"   >
 								<FlexBox id="ToSaveFlexBox"  class="sapUiTinyMargin"   >
-										<Button id="ToSaveButton" text="To Save"   ></Button>
+										<Button id="ToSaveButton" text="To Save" press="onSaveBatch"  ></Button>
 								</FlexBox>
 							</FlexBox>
 						</FlexBox>

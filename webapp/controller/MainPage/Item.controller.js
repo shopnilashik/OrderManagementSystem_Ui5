@@ -316,6 +316,25 @@ sap.ui.define(
             }.bind(this)
           );
         },
+        simulateHandler:function(){
+          var oView = this.getView();
+
+          if (!this._pValueHelpDialogSimulate) {
+            this._pValueHelpDialogSimulate = Fragment.load({
+              id: oView.getId(),
+              name: "OrderSystem.ordersystem.view.fragment.simulate",
+              controller: this,
+            }).then(function (oValueHelpDialogSimulate) {
+              oView.addDependent(oValueHelpDialogSimulate);
+              return oValueHelpDialogSimulate;
+            });
+          }
+          this._pValueHelpDialogSimulate.then(
+            function (oValueHelpDialogSimulate) {
+              oValueHelpDialogSimulate.open();
+            }.bind(this)
+          );
+        },
 
         handleSearch: function (oEvent) {
           var sValue = oEvent.getParameter("value");
@@ -333,6 +352,27 @@ sap.ui.define(
           }
 
           oInput.setValue(oSelectedItem.getCells()[0].getTitle());
+        },
+        onSaveButton:function(){
+          this._pValueHelpDialogChoice.then(
+            function (oValueHelpDialogChoice) {
+              oValueHelpDialogChoice.close();
+            }.bind(this)
+          );
+        },
+        onSaveBatch:function(){
+          this._pValueHelpDialogBatch.then(
+            function (oValueHelpDialogBatch) {
+              oValueHelpDialogBatch.close();
+            }.bind(this)
+          );
+        },
+        onSaveButtonSimulate:function(){
+          this._pValueHelpDialogSimulate.then(
+            function (oValueHelpDialogSimulate) {
+              oValueHelpDialogSimulate.close();
+            }.bind(this)
+          );
         },
       }
     );

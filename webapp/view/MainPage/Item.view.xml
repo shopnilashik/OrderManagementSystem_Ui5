@@ -106,7 +106,7 @@
             </FlexBox>
 			<HBox id="_IDGenVBox2" justifyContent="End">
                <items>
-                <Button id="_IDGenButton2" text="Simulate" class=" simulateMargin"></Button>
+                <Button id="_IDGenButton2" text="Simulate" class=" simulateMargin" press="simulateHandler"></Button>
             </items>
 		  </HBox>
 		 </items>

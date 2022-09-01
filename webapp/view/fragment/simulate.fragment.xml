@@ -1,0 +1,230 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" xmlns:c="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:ui="sap.ui" 
+   xmlns:f="sap.ui.layout.form">
+  
+<Dialog
+		id="helloDvbvnialog"
+		title="Toning">
+      <FlexBox id="simutateFlexBox" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+		    <!-- column 1 -->
+            <FlexBox id="simutateFlexBoxMain" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Row" >
+			
+				<FlexBox id="SimulatecolumnFlexBox1" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Column" >
+						<Table id="SimulateTable1" class="sapUiTinyMarginEnd" items="{oOrderData>/BatchTable}">
+						
+							<columns>
+								<Column id="SimulateTable2Column801" >
+									<Text id="SimulateText" text="Document Date" ></Text>
+								</Column>
+								<Column id="SimulateTable2Column802" >
+									<Text id="SimulateText2" text="External Ref"></Text>
+								</Column>
+								<Column id="SimulateTable2Column803" >
+									<Text id="SimulateText3" text="Choice"></Text>
+								</Column>
+								<Column id="SimulateTable2Column804" >
+									<Text id="SimulateText4" text="Application"></Text>
+								</Column>
+								<Column id="SimulateTable2Column805" >
+									<Text id="SimulateText4.1" text="Caliber"></Text>
+								</Column>
+								<Column id="SimulateTable2Column806" >
+									<Text id="SimulateText4.2" text="Quantity"></Text>
+								</Column>
+								<Column id="SimulateTable2Column807" >
+									<Text id="SimulateText4.3" text="Filter"></Text>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem id="SimulateTable2Column80ListItem1" >
+									<cells>
+										<ObjectNumber id="SimulateObjectNumber1" number="{oOrderData>documentDate}" emphasized="false"/>
+											<Text id="SimulateText5" text="{oOrderData>externalRef}"/>
+											<Text id="SimulateText6" text="{oOrderData>choice}"/>
+											<Text id="SimulateText7" text="{oOrderData>application}"/>
+											<Text id="SimulateText8" text="{oOrderData>caliber}"/>
+											<Text id="SimulateText9" text="{oOrderData>quantity}"/>
+											<CheckBox id="Simulate1CheckBox1.21"  ></CheckBox>
+									</cells>
+								</ColumnListItem>
+							</items>
+							<layoutData>
+								<l:SplitterLayoutData id="Simulate1SplitterLayoutData1"  resizable="false" />
+							</layoutData>
+						</Table>   
+				</FlexBox>
+            
+
+				<FlexBox id="ProposalFlexBox1.2" height="100px" alignItems="Center" justifyContent="Center" class="sapUiTinyMargin">
+					<Button id="ProposalBtn" text="Proposal"   ></Button>
+				</FlexBox>
+			</FlexBox>
+
+			<!-- column 2 -->
+			<FlexBox id="SimulatecolumnFlexBox2" alignContent="Start" alignItems="Start" class="sapUiTinyMargin " justifyContent="Start"  >
+				<FlexBox id="simutateFlexBoxMain2" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Row" >
+
+	    	     	 <Table id="SimulateTable2" class="sapUiTinyMarginEnd" items="{oOrderData>/BatchTable}">
+					
+						<columns>
+							<Column id="SimulateTable1Column201" >
+								<Text id="SimulateText1" text="Document Date" ></Text>
+							</Column>
+							<Column id="SimulateTable2Column202" >
+								<Text id="SimulateText12" text="External Ref"></Text>
+							</Column>
+							<Column id="SimulateTable2Column203" >
+								<Text id="SimulateText13" text="Choice"></Text>
+							</Column>
+							<Column id="SimulateTable2Column204" >
+								<Text id="SimulateText14" text="Application"></Text>
+							</Column>
+							<Column id="SimulateTable2Column205" >
+								<Text id="SimulateText14.1" text="Caliber"></Text>
+							</Column>
+							<Column id="SimulateTable2Column206" >
+								<Text id="SimulateText14.2" text="Quantity"></Text>
+							</Column>
+							<Column id="SimulateTable2Column207" >
+								<Text id="SimulateText14.3" text="Filter"></Text>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem id="SimulateTable2Column20ListItem1" >
+								<cells>
+									<ObjectNumber id="Simulate1ObjectNumber1" number="{oOrderData>documentDate}" emphasized="false"/>
+										<Text id="SimulateText15" text="{oOrderData>externalRef}"/>
+										<Text id="SimulateText16" text="{oOrderData>choice}"/>
+										<Text id="SimulateText17" text="{oOrderData>application}"/>
+										<Text id="SimulateText18" text="{oOrderData>caliber}"/>
+										<Text id="SimulateText19" text="{oOrderData>quantity}"/>
+										<CheckBox id="SimulateCheckBox1.21"  ></CheckBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<layoutData>
+							<l:SplitterLayoutData id="SimulateSplitterLayoutData1"  resizable="false" />
+						</layoutData>
+					</Table>   
+			 		
+
+					<FlexBox id="SelectFlexBox1.2" height="100px" alignItems="Center" justifyContent="Center" class="sapUiTinyMargin">
+						<Button id="SelectBtn" text="Select"   ></Button> 
+					</FlexBox>
+				</FlexBox>
+			</FlexBox>
+			<!-- column 3  -->
+			<FlexBox id="SimulatecolumnFlexBox3" alignContent="Start" alignItems="Start" class="sapUiTinyMargin sapUiMediumMarginTop" justifyContent="Start" direction="Row" >
+				<FlexBox id="simutateFlexBoxMain3" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Row" >
+
+						<Table id="SimulateTable3" class="sapUiTinyMarginEnd" items="{oOrderData>/BatchTable}">
+						
+							<columns>
+								<Column id="SimulateTable3Column301" >
+									<Text id="SimulateText31" text="Document Date" ></Text>
+								</Column>
+								<Column id="SimulateTable3Column302" >
+									<Text id="SimulateText32" text="External Ref"></Text>
+								</Column>
+								<Column id="SimulateTable3Column303" >
+									<Text id="SimulateText33" text="Choice"></Text>
+								</Column>
+								<Column id="SimulateTable3Column304" >
+									<Text id="SimulateText34" text="Application"></Text>
+								</Column>
+								<Column id="SimulateTable3Column305" >
+									<Text id="SimulateText34.1" text="Caliber"></Text>
+								</Column>
+								<Column id="SimulateTable3Column306" >
+									<Text id="SimulateText34.2" text="Quantity"></Text>
+								</Column>
+								<Column id="SimulateTable3Column307" >
+									<Text id="SimulateText34.3" text="Filter"></Text>
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem id="SimulateTable3Column30ListItem1" >
+									<cells>
+										<ObjectNumber id="Simulate3ObjectNumber1" number="{oOrderData>documentDate}" emphasized="false"/>
+											<Text id="SimulateText35" text="{oOrderData>externalRef}"/>
+											<Text id="SimulateText36" text="{oOrderData>choice}"/>
+											<Text id="SimulateText37" text="{oOrderData>application}"/>
+											<Text id="SimulateText38" text="{oOrderData>caliber}"/>
+											<Text id="SimulateText39" text="{oOrderData>quantity}"/>
+											<CheckBox id="Simulate3CheckBox1.21"  ></CheckBox>
+									</cells>
+								</ColumnListItem>
+							</items>
+							<layoutData>
+								<l:SplitterLayoutData id="Simulate3SplitterLayoutData1"  resizable="false" />
+							</layoutData>
+						</Table>   
+
+						<FlexBox id="Select2FlexBox1.2" height="100px" alignItems="Center" justifyContent="Center" class="sapUiTinyMargin">
+							<Button id="Select2Btn" text="Select"   ></Button> 
+						</FlexBox>
+				</FlexBox>
+			</FlexBox>
+			<!-- column 4 -->
+			<FlexBox id="SimulatecolumnFlexBox4" alignContent="Start" alignItems="Start" class="sapUiTinyMargin " justifyContent="Start" >
+				<FlexBox id="simutateFlexBoxMain4" alignContent="Start" alignItems="Start" class="sapUiTinyMargin" justifyContent="Start" direction="Row" >
+
+	    	 		<Table id="SimulateTable4" class="sapUiTinyMarginEnd" items="{oOrderData>/BatchTable}">
+					
+						<columns>
+							<Column id="SimulateTable3Column401" >
+								<Text id="SimulateText41" text="Document Date" ></Text>
+							</Column>
+							<Column id="SimulateTable3Column402" >
+								<Text id="SimulateText42" text="External Ref"></Text>
+							</Column>
+							<Column id="SimulateTable3Column403" >
+								<Text id="SimulateText43" text="Choice"></Text>
+							</Column>
+							<Column id="SimulateTable3Column404" >
+								<Text id="SimulateText44" text="Application"></Text>
+							</Column>
+							<Column id="SimulateTable3Column405" >
+								<Text id="SimulateText44.1" text="Caliber"></Text>
+							</Column>
+							<Column id="SimulateTable3Column406" >
+								<Text id="SimulateText44.2" text="Quantity"></Text>
+							</Column>
+							<Column id="SimulateTable3Column407" >
+								<Text id="SimulateText44.3" text="Filter"></Text>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem id="SimulateTable3Column40ListItem1" >
+								<cells>
+									<ObjectNumber id="Simulate4ObjectNumber1" number="{oOrderData>documentDate}" emphasized="false"/>
+										<Text id="SimulateText45" text="{oOrderData>externalRef}"/>
+										<Text id="SimulateText46" text="{oOrderData>choice}"/>
+										<Text id="SimulateText47" text="{oOrderData>application}"/>
+										<Text id="SimulateText48" text="{oOrderData>caliber}"/>
+										<Text id="SimulateText49" text="{oOrderData>quantity}"/>
+										<CheckBox id="Simulate4CheckBox1.21"  ></CheckBox>
+								</cells>
+							</ColumnListItem>
+						</items>
+						<layoutData>
+							<l:SplitterLayoutData id="Simulate4SplitterLayoutData1"  resizable="false" />
+						</layoutData>
+					</Table>   
+		
+		            <FlexBox id="Select3FlexBox1.2" height="100px" alignItems="Center" justifyContent="Center" class="sapUiTinyMargin">
+							<Button id="Select3Btn" text="Select"   ></Button> 
+					</FlexBox>
+		    	</FlexBox>	
+		    </FlexBox>	
+		</FlexBox>	
+
+
+			 <Bar id="SimulatenBar">
+			<contentRight>
+				<Button id="SaveButtonSimulate" text="Save" design="Transparent" press="onSaveButtonSimulate"></Button>
+			</contentRight>
+        </Bar>
+	</Dialog>
+</core:FragmentDefinition>
